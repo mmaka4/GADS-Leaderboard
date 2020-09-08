@@ -59,24 +59,20 @@ class LearningFragment : Fragment() {
         val call = api.getLearners()
 
         call.enqueue(object : Callback<ArrayList<Learner>> {
+        val gson = Gson()
 
             override fun onResponse(
                 call: Call<ArrayList<Learner>>,
                 response: Response<ArrayList<Learner>>
             ) {
                 if (response.isSuccessful) {
-//                    Log.i("ResponseString", gson.toJson(response.body()))
+                    Log.i("ResponseString", gson.toJson(response.body()))
 
                     learnersList = response.body()!!
                     Log.i("ResponseString", learnersList[1].name!!)
 //                    shimmer_frame2.stopShimmer()
 //                    shimmer_frame2.visibility = View.GONE
 //                    listFruitscyclerView.visibility = View.VISIBLE
-
-
-                    mData = ArrayList()
-
-//                    mData = response.body()?.matunda!!
 
                     learnerAdapter =
                         LearnerAdapter(

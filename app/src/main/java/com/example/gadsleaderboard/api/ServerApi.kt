@@ -11,5 +11,5 @@ interface ServerApi {
     fun getLearners(): Call<ArrayList<Learner>>
 
     @GET("/api/skilliq")
-    fun getSkill(): Call<Skill>
+    fun getSkill(): Call<ArrayList<Skill>>
 }

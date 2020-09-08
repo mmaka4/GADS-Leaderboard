@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">GADS Leaderboard</string>
-    <string name="leaderoard">LEADERBOARD</string>
+    <string name="leaderboard">LEADERBOARD</string>
     <string name="project_submission">Project submission</string>
     <string name="hintFirstName">First Name</string>
     <string name="hintLastName">Last Name</string>

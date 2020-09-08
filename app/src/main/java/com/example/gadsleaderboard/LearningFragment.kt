@@ -43,11 +43,10 @@ class LearningFragment : Fragment() {
     private fun initializeRecyclerView() {
         recyclerView = rootView.findViewById(R.id.learning_recycler)
         recyclerView.layoutManager = LinearLayoutManager(activity)
-        loadFruits()
-        //recyclerView.adapter = adapter
+        loadLearners()
     }
 
-    private fun loadFruits() {
+    private fun loadLearners() {
         val base = "https://gadsapi.herokuapp.com"
         val retrofit =
             Retrofit.Builder().baseUrl(base).addConverterFactory(

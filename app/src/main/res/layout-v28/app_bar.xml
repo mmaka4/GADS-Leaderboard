@@ -39,7 +39,7 @@
                 android:layout_alignParentEnd="true"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/black"
-                android:text="Submit"
+                android:text="@string/submit_text"
                 android:id="@+id/submit_btn"/>
         </RelativeLayout>
 

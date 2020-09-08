@@ -48,11 +48,7 @@ class LearningFragment : Fragment() {
     }
 
     private fun loadLearners() {
-        val base = "https://gadsapi.herokuapp.com"
-        val retrofit =
-            Retrofit.Builder().baseUrl(base).addConverterFactory(
-                GsonConverterFactory.create()
-            ).build()
+
 
         val api = NetworkClient.getRetrofitClient()?.create(ServerApi::class.java)
 

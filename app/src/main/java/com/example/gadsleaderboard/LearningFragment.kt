@@ -49,7 +49,6 @@ class LearningFragment : Fragment() {
 
     private fun loadLearners() {
 
-
         val api = NetworkClient.getRetrofitClient()?.create(ServerApi::class.java)
 
         val call = api?.getLearners()

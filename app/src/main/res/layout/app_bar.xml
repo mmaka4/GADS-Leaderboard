@@ -27,7 +27,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:text="@string/leaderoard"
+                android:text="@string/leaderboard"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="20sp" />

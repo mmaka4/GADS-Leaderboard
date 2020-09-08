@@ -21,8 +21,8 @@ class TabAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getPageTitle(position: Int): CharSequence {
         return when (position) {
-            0 -> "First Tab"
-            1 -> "Second Tab"
+            0 -> "Learning Leaders"
+            1 -> "Skill IQ Leaders"
             else -> throw IllegalStateException("position $position is invalid for this viewpager")
             }
         }

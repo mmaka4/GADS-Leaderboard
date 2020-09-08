@@ -164,5 +164,4 @@
             android:id="@+id/submit_project_btn"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </LinearLayout>

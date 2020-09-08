@@ -26,7 +26,6 @@ class LearningFragment : Fragment() {
     private lateinit var rootView: View
     lateinit var recyclerView: RecyclerView
     lateinit var learnerAdapter: LearnerAdapter
-    lateinit var mData: ArrayList<Learner>
     lateinit var fragmentContext: Context
     lateinit var learnersList: ArrayList<Learner>
 
@@ -65,6 +64,7 @@ class LearningFragment : Fragment() {
 
                     learnersList = response.body()!!
                     Log.i("ResponseString", learnersList[1].name!!)
+
 //                    shimmer_frame2.stopShimmer()
 //                    shimmer_frame2.visibility = View.GONE
 //                    listFruitscyclerView.visibility = View.VISIBLE

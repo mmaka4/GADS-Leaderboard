@@ -58,8 +58,6 @@ class LearningFragment : Fragment() {
 
         val call = api.getLearners()
 
-        val gson = Gson()
-
         call.enqueue(object : Callback<ArrayList<Learner>> {
 
             override fun onResponse(
@@ -96,7 +94,7 @@ class LearningFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<ArrayList<Learner>>, t: Throwable) {
-                Log.i("ResponseFailure1", t.message)
+                Log.i("ResponseFailure1", t.message!!)
             }
 
         })

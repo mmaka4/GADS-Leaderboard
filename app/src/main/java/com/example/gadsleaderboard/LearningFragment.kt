@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gadsleaderboard.adapter.LearnerAdapter
+import com.example.gadsleaderboard.api.NetworkClient
 import com.example.gadsleaderboard.api.ServerApi
 import com.example.gadsleaderboard.model.Learner
 import com.google.gson.Gson
@@ -53,11 +54,11 @@ class LearningFragment : Fragment() {
                 GsonConverterFactory.create()
             ).build()
 
-        val api = retrofit.create(ServerApi::class.java)
+        val api = NetworkClient.getRetrofitClient()?.create(ServerApi::class.java)
 
-        val call = api.getLearners()
+        val call = api?.getLearners()
 
-        call.enqueue(object : Callback<ArrayList<Learner>> {
+        call?.enqueue(object : Callback<ArrayList<Learner>> {
         val gson = Gson()
 
             override fun onResponse(

@@ -24,7 +24,7 @@ class LearnerAdapter (private val learnerList:ArrayList<Learner>, private val co
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         holder.name.text = learnerList[position].name
-        val hoursAndCountry = learnerList[position].hours.toString()+ " "+ learnerList[position].country.toString()
+        val hoursAndCountry = learnerList[position].hours.toString()+ " learning hours, "+ learnerList[position].country.toString()+ "."
         holder.hours.text = hoursAndCountry
         //Picasso.get().load(context.resources.getString(R.string.imageFruitsURL)+foodList[position].image).into(holder.image)
     }

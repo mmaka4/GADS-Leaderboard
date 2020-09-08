@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkClient {
     const val BASE_URL = "https://gadsapi.herokuapp.com"
-    private var retrofit: Retrofit? = null
+    var retrofit: Retrofit? = null
     fun getRetrofitClient(): Retrofit? {
         if (retrofit == null) {
 

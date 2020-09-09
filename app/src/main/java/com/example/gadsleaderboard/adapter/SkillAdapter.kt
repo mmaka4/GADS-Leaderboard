@@ -25,7 +25,7 @@ class SkillAdapter (private val skillList:ArrayList<Skill>, private val context:
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         holder.name.text = skillList[position].name
-        val hoursAndCountry = skillList[position].score.toString()+ " "+ skillList[position].country.toString()
+        val hoursAndCountry = skillList[position].score.toString()+ " skill IQ Score, "+ skillList[position].country.toString()
         holder.hours.text = hoursAndCountry
 //        Picasso.get().load(context.resources.getString(NetworkClient.BASE_URL)+foodList[position].image).into(holder.image)
     }

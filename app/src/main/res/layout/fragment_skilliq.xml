@@ -5,17 +5,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.gadsleaderboard.SkillFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Skill IQ tab"
-        android:textSize="40sp"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
-        tools:listitem="@layout/skill_iq_item"/>
+        tools:listitem="@layout/skill_iq_item"
+        android:id="@+id/skill_recycler"/>
 
 </FrameLayout>

@@ -5,7 +5,7 @@
     android:background="@color/lightblack"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -14,21 +14,32 @@
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".5"
-        app:layout_constraintWidth_percent=".8">
+        app:layout_constraintHeight_percent=".45"
+        app:layout_constraintWidth_percent=".85">
 
         <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="30dp"
             android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
             android:src="@drawable/ic_cancel_black_24dp"
             android:layout_gravity="end"
             android:tint="@color/lightblack2"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:id="@+id/cancel_btn"/>
 
         <LinearLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_gravity="center"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal"
+            android:id="@+id/confirm_layout">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,8 +53,19 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src=""/>
+                android:src="@drawable/question_mark"/>
         </LinearLayout>
 
-    </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirm_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent=".35"
+            android:text="OK"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

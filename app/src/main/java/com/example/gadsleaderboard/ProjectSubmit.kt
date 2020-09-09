@@ -52,30 +52,4 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
          Log.i("ProjectSumit", "showDialog")
     }
 
-    @SuppressLint("InflateParams")
-    fun dialog() {
-        val mDialogView = LayoutInflater.from(this).inflate(R.layout.confirm_pop_up, null)
-        //AlertDialogBuilder
-        val mBuilder = AlertDialog.Builder(this)
-            .setView(mDialogView)
-        mBuilder.show()
-        //show dialog
-//        val  mAlertDialog = mBuilder.show()
-        //login button click of custom layout
-//        mDialogView.dialogLoginBtn.setOnClickListener {
-//            //dismiss dialog
-//            mAlertDialog.dismiss()
-//            //get text from EditTexts of custom layout
-//            val name = mDialogView.dialogNameEt.text.toString()
-//            val email = mDialogView.dialogEmailEt.text.toString()
-//            val password = mDialogView.dialogPasswEt.text.toString()
-//            //set the input text in TextView
-//            mainInfoTv.setText("Name:"+ name +"\nEmail: "+ email +"\nPassword: "+ password)
-//        }
-//        //cancel button click of custom layout
-//        mDialogView.dialogCancelBtn.setOnClickListener {
-//            //dismiss dialog
-//            mAlertDialog.dismiss()
-//        }
-    }
 }

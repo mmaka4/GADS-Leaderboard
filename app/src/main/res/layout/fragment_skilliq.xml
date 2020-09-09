@@ -12,5 +12,4 @@
         android:orientation="vertical"
         tools:listitem="@layout/skill_iq_item"
         android:id="@+id/skill_recycler"/>
-
 </FrameLayout>

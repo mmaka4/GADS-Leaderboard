@@ -6,6 +6,8 @@
     <color name="white">#FFFFFF</color>
     <color name="whiteMilky">#F6F6F7</color>
     <color name="black">#000</color>
+    <color name="lightblack">#80000000</color>
+    <color name="lightblack2">#BF000000</color>
     <color name="yellowGold">#F9A602</color>
 
 </resources>

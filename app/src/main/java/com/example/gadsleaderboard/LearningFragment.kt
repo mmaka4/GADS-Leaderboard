@@ -60,10 +60,10 @@ class LearningFragment : Fragment() {
                 response: Response<ArrayList<Learner>>
             ) {
                 if (response.isSuccessful) {
-                    Log.i("ResponseString", gson.toJson(response.body()))
+                    Log.i("ResponseString : Learn ", gson.toJson(response.body()))
 
                     learnersList = response.body()!!
-                    Log.i("ResponseString", learnersList[1].name!!)
+                    Log.i("ResponseString : Learn ", learnersList[1].name!!)
 
 //                    shimmer_frame2.stopShimmer()
 //                    shimmer_frame2.visibility = View.GONE
@@ -77,15 +77,15 @@ class LearningFragment : Fragment() {
 
                     learnerAdapter.notifyDataSetChanged()
 
-                    learning_recycler.adapter = learnerAdapter
+                    recyclerView.adapter = learnerAdapter
 
                 } else {
-                    Log.i("ResponseString", "Not Successfully!!")
+                    Log.i("ResponseString : Learn ", "Not Successfully!!")
                 }
             }
 
             override fun onFailure(call: Call<ArrayList<Learner>>, t: Throwable) {
-                Log.i("ResponseFailure1", t.message!!)
+                Log.i("ResponseFailure: Learn ", t.message!!)
             }
 
         })

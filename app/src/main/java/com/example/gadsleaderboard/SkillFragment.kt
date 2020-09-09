@@ -36,7 +36,7 @@ class SkillFragment : Fragment() {
     ): View? {        // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_skilliq, container, false)
         fragmentContext = this.context!!
-
+        initializeRecyclerView()
         return rootView
     }
 
@@ -60,10 +60,10 @@ class SkillFragment : Fragment() {
                 response: Response<ArrayList<Skill>>
             ) {
                 if (response.isSuccessful) {
-                    Log.i("ResponseString", gson.toJson(response.body()))
+                    Log.i("ResponseString : Skill", gson.toJson(response.body()))
 
                     skillsList = response.body()!!
-                    Log.i("ResponseString", skillsList[1].name!!)
+                    Log.i("ResponseString : Skill ", skillsList[1].name!!)
 
 //                    shimmer_frame2.stopShimmer()
 //                    shimmer_frame2.visibility = View.GONE
@@ -77,7 +77,7 @@ class SkillFragment : Fragment() {
 
                     skillAdapter.notifyDataSetChanged()
 
-                    learning_recycler.adapter = skillAdapter
+                    recyclerView.adapter = skillAdapter
 
                 } else {
                     Log.i("ResponseString", "Not Successfully!!")

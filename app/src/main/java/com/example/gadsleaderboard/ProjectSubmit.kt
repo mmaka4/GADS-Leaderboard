@@ -25,7 +25,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         imageView.setOnClickListener(this)
 
         //dialog()
-        showDialog()
+        showSuccessDialog()
     }
 
     override fun onClick(view: View?) {
@@ -36,7 +36,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-     fun showDialog() {
+     fun showConfirmDialog() {
         val dialog = Dialog(this, R.style.CustomDialogTheme)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
@@ -50,6 +50,17 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         cancelBtn.setOnClickListener { dialog.dismiss() }
         dialog.show()
          Log.i("ProjectSumit", "showDialog")
+    }
+
+    fun showSuccessDialog() {
+        val dialog = Dialog(this, R.style.CustomDialogTheme)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setCancelable(false)
+        dialog.setContentView(R.layout.success_pop_up)
+//         dialog.window?.setDimAmount(0.65f)
+
+        dialog.show()
+        Log.i("ProjectSumit", "showDialog")
     }
 
 }

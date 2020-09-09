@@ -10,7 +10,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/white"
+        android:background="@drawable/background_shape_white"
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -64,6 +64,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintWidth_percent=".35"
             android:text="OK"
+            android:textColor="@color/yellowGold"
+            android:background="@drawable/background_yellow_stroke"
+            app:backgroundTint="@null"
             android:layout_marginTop="40dp"
             android:layout_gravity="center"/>
 

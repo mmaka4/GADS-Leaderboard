@@ -80,12 +80,12 @@ class SkillFragment : Fragment() {
                     recyclerView.adapter = skillAdapter
 
                 } else {
-                    Log.i("ResponseString", "Not Successfully!!")
+                    Log.i("ResponseString : Skill", "Not Successfully!!")
                 }
             }
 
             override fun onFailure(call: Call<ArrayList<Skill>>, t: Throwable) {
-                Log.i("ResponseFailure2", t.message!!)
+                Log.i("ResponseFailure: Skill", t.message!!)
             }
 
         })

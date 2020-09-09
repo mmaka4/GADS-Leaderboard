@@ -15,7 +15,7 @@ class SkillAdapter (private val skillList:ArrayList<Skill>, private val context:
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val layoutInflater = LayoutInflater.from(context)
-        val view:View = layoutInflater.inflate(R.layout.learning_item,parent,false)
+        val view:View = layoutInflater.inflate(R.layout.skill_iq_item,parent,false)
         return FoodViewHolder(view)
     }
 

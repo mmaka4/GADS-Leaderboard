@@ -5,70 +5,79 @@
     android:background="@color/lightblack"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/background_shape_white"
-        android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".45"
-        app:layout_constraintWidth_percent=".85">
+        android:foregroundGravity="center"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="12dp"
+        android:layout_width="340dp"
+        android:layout_height="360dp">
 
-        <ImageView
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="4dp"
-            android:src="@drawable/ic_cancel_black_24dp"
-            android:layout_gravity="end"
-            android:tint="@color/lightblack2"
-            android:gravity="center"
-            android:id="@+id/cancel_btn"/>
-
-        <LinearLayout
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cancel_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
             android:layout_gravity="center"
-            android:layout_marginTop="70dp"
-            android:orientation="horizontal"
-            android:id="@+id/confirm_layout">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Are you sure"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:gravity="center"/>
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
 
             <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/question_mark"/>
-        </LinearLayout>
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_cancel_black_24dp"
+                android:layout_gravity="end"
+                android:tint="@color/lightblack2"
+                android:gravity="center"
+                android:id="@+id/cancel_btn"/>
 
-        <com.google.android.material.button.MaterialButton
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/confirm_layout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintWidth_percent=".35"
-            android:text="OK"
-            android:textColor="@color/yellowGold"
-            android:background="@drawable/background_yellow_stroke"
-            app:backgroundTint="@null"
-            android:layout_marginTop="40dp"
-            android:layout_gravity="center"/>
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:orientation="horizontal"
+                android:id="@+id/confirm_layout">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Are you sure"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/question_mark"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/confirm_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_percent=".38"
+                android:text="Yes"
+                android:textAllCaps="false"
+                android:textColor="@color/yellowGold"
+                android:background="@drawable/background_yellow_stroke"
+                app:backgroundTint="@null"
+                android:layout_marginTop="60dp"
+                android:layout_gravity="center"
+                android:id="@+id/yes_btn"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,4 +24,10 @@
         <item name="colorControlNormal">@color/white</item>
     </style>
 
+    <style name="CustomDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/lightblack</item>
+    </style>
+
 </resources>

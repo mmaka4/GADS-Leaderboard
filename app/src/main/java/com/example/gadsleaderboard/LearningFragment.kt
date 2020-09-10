@@ -65,9 +65,9 @@ class LearningFragment : Fragment() {
                     learnersList = response.body()!!
                     Log.i("ResponseString : Learn ", learnersList[1].name!!)
 
-//                    shimmer_frame2.stopShimmer()
-//                    shimmer_frame2.visibility = View.GONE
-//                    listFruitscyclerView.visibility = View.VISIBLE
+                    shimmer_frame2.stopShimmer()
+                    shimmer_frame2.visibility = View.GONE
+                    recyclerView.visibility = View.VISIBLE
 
                     learnerAdapter =
                         LearnerAdapter(

@@ -58,8 +58,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 finish()
             }
             R.id.submit_project_btn -> {
-                //&& firstName.isBlank() && lastName.isBlank() && projectLink.isBlank()
-                //Log.i("EditText Values", " YYYYY: $emailTxt $firstName $lastName $projectLink")
+
                 emailTxt = fName?.text.toString()
                 firstName = lName?.text.toString()
                 lastName = eMail?.text.toString()

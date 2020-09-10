@@ -51,7 +51,12 @@
         </LinearLayout>
     </ScrollView>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/skillSwipeRefresher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -59,4 +64,5 @@
         android:orientation="vertical"
         tools:listitem="@layout/skill_iq_item"
         android:id="@+id/skill_recycler"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </FrameLayout>

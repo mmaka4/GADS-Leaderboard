@@ -13,8 +13,9 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="m">
-        <activity android:name=".MainActivity">
+        tools:targetApi="m"
+        tools:ignore="ExtraText">
+        <activity android:name=".SplashActivity" android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +25,7 @@
         <activity android:name=".LearningFragment"/>
         <activity android:name=".SkillFragment"/>
         <activity android:name=".ProjectSubmit"/>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

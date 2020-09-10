@@ -98,7 +98,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"
+                android:id="@+id/fName"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -122,7 +123,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"
+                android:id="@+id/lName"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,7 +149,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"
+                android:id="@+id/eMail"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -172,7 +175,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"
+                android:id="@+id/pLink"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

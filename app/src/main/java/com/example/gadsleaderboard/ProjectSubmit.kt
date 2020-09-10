@@ -27,11 +27,13 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var imageView : ImageView
     private lateinit var submitProjectBtn : Button
+
     private val submitBaseUrl = "https://docs.google.com/forms/d/e/"
+
     private var emailTxt: String = ""
-    var firstName: String = ""
-    var lastName: String = ""
-    var projectLink: String = ""
+    private var firstName: String = ""
+    private var lastName: String = ""
+    private var projectLink: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

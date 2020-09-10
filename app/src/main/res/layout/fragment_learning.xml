@@ -14,5 +14,6 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         tools:listitem="@layout/learning_item"
+        android:background="@color/white"
         android:id="@+id/learning_recycler"/>
 </FrameLayout>

@@ -88,7 +88,6 @@
             app:boxCornerRadiusBottomEnd="6dp"
             android:background="@color/black"
             app:hintTextColor="@color/yellowGold"
-
             android:id="@+id/first_name"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".45"
@@ -112,6 +111,7 @@
             app:boxCornerRadiusBottomEnd="6dp"
             app:boxStrokeColor="@color/custom_outlinebox_color"
             android:background="@color/black"
+            app:hintTextColor="@color/yellowGold"
             android:id="@+id/last_name"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".45"
@@ -121,7 +121,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,6 +136,7 @@
             app:boxCornerRadiusBottomStart="6dp"
             app:boxCornerRadiusBottomEnd="6dp"
             android:background="@color/black"
+            app:hintTextColor="@color/yellowGold"
             android:id="@+id/email"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".93"
@@ -145,7 +146,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -160,6 +161,7 @@
             app:boxCornerRadiusBottomStart="6dp"
             app:boxCornerRadiusBottomEnd="6dp"
             android:background="@color/black"
+            app:hintTextColor="@color/yellowGold"
             android:id="@+id/project_link"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".93"
@@ -169,7 +171,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

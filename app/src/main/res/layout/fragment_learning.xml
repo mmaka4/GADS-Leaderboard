@@ -52,7 +52,6 @@
         </LinearLayout>
     </ScrollView>
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:visibility="gone"
         android:layout_width="match_parent"

@@ -6,7 +6,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.gadsleaderboard.SkillFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_frame2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#eeeeee"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+
+                    <include layout="@layout/skill_iq_item_placeholder" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

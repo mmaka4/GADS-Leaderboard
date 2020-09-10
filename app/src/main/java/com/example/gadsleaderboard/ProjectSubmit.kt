@@ -82,7 +82,6 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         }
         cancelBtn.setOnClickListener { dialog.dismiss() }
         dialog.show()
-         Log.i("ProjectSumit", "showDialog")
     }
 
     fun showSuccessDialog() {

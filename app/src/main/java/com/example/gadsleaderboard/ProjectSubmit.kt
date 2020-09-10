@@ -60,7 +60,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 projectLink = pLink?.text.toString()
 
                 if (!emailTxt.isBlank() && !firstName.isBlank() && !lastName.isBlank() && !projectLink.isBlank()) {
-                    Log.i("EditText Values", "YYYYY: $emailTxt $firstName $lastName $projectLink")
+                    Log.i("EditText ", "Values: $emailTxt $firstName $lastName $projectLink")
                 }
             }
         }

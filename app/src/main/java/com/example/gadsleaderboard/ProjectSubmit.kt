@@ -62,7 +62,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 projectLink = pLink?.text.toString()
 
                 if (!emailTxt.isBlank() && !firstName.isBlank() && !lastName.isBlank() && !projectLink.isBlank()) {
-                    Log.i("EditText ", "Values: $emailTxt $firstName $lastName $projectLink")
+                    showConfirmDialog()
                 }
             }
         }
@@ -77,6 +77,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         val cancelBtn = dialog.findViewById(R.id.cancel_btn) as ImageView
         val yesBtn = dialog.findViewById(R.id.yes_btn) as Button
         yesBtn.setOnClickListener {
+            Log.i("EditText ", "Values: $emailTxt $firstName $lastName $projectLink")
             dialog.dismiss()
         }
         cancelBtn.setOnClickListener { dialog.dismiss() }
@@ -106,43 +107,38 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         Log.i("ProjectSumit", "showDialog")
     }
 
-//    private fun update(id:String, fruitName:String, fruitPrice:String){
-//
-//        Log.i("EditText Values",id+" "+fruitName+" "+fruitPrice)
-//        val retrofit = Retrofit.Builder().baseUrl(submitBaseUrl).addConverterFactory(
-//            GsonConverterFactory.create()).build()
-//
-//        val api = retrofit.create(ServerApi::class.java)
-//
-//        val call = api.submitProject(id, fruitName, fruitPrice)
-//
-//        val gson = Gson()
-//
-//        call.enqueue(object : Callback<MatundaResponse> {
-//
-//            override fun onResponse(
-//                call: Call<MatundaResponse>,
-//                response: Response<MatundaResponse>
-//            ) {
-//                Log.i("ResponseString",gson.toJson(response.body()))
-//
-//                if(response.isSuccessful){
-//                    if (response.body()?.status!!){
-//                        val intent = Intent(this@UpdateActivity, ListFruits::class.java)
-//                        startActivity(intent)
-//                    }
-//
-////                    response.body()?.matunda
-//                }else{
-//
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<MatundaResponse>, t: Throwable) {
-//                Log.i("ResponseFailure1",t.message)
-//            }
-//
-//        })
-//
-//    }
+    private fun update(mail:String, firstName:String, lastName:String, projectLink:String){
+
+        val retrofit = Retrofit.Builder().baseUrl(submitBaseUrl).addConverterFactory(
+            GsonConverterFactory.create()).build()
+
+        val api = retrofit.create(ServerApi::class.java)
+
+        val call = api.submitProject(mail, firstName, lastName, projectLink)
+
+        val gson = Gson()
+
+        call.enqueue(object : Callback<Void> {
+
+            override fun onResponse(
+                call: Call<Void>,
+                response: Response<Void>
+            ) {
+                Log.i("ResponseString",gson.toJson(response.body()))
+
+                if(response.isSuccessful){
+
+//                    response.body()?.matunda
+                }else{
+
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                Log.i("ResponseFailure1",t.message!!)
+            }
+
+        })
+
+    }
 }

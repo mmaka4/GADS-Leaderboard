@@ -44,9 +44,9 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         submitProjectBtn.setOnClickListener(this)
 
         emailTxt = fName?.text.toString()
-        firstName = lName?.text.toString()
-        lastName = eMail?.text.toString()
-        projectLink = pLink?.text.toString()
+        firstName = lName.text.toString()
+        lastName = eMail.text.toString()
+        projectLink = pLink.text.toString()
 
 //        showSuccessDialog()
 //        showFailureDialog()
@@ -58,8 +58,15 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 finish()
             }
             R.id.submit_project_btn -> {
-                if (email.isNotEmpty() && firstName.isNotEmpty() && lastName.isNotEmpty() && projectLink.isNotEmpty()) {
-                    Log.i("EditText Values", "$email $firstName $lastName $projectLink")
+                //&& firstName.isBlank() && lastName.isBlank() && projectLink.isBlank()
+                //Log.i("EditText Values", " YYYYY: $emailTxt $firstName $lastName $projectLink")
+                emailTxt = fName?.text.toString()
+                firstName = lName?.text.toString()
+                lastName = eMail?.text.toString()
+                projectLink = pLink?.text.toString()
+
+                if (!emailTxt.isBlank() && !firstName.isBlank() && !lastName.isBlank() && !projectLink.isBlank()) {
+                    Log.i("EditText Values", "YYYYY: $emailTxt $firstName $lastName $projectLink")
                 }
             }
         }

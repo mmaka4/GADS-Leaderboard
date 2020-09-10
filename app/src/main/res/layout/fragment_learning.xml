@@ -58,4 +58,5 @@
         tools:listitem="@layout/learning_item"
         android:background="@color/white"
         android:id="@+id/learning_recycler"/>
+
 </FrameLayout>

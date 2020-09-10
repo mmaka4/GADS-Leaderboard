@@ -43,11 +43,6 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         submitProjectBtn = findViewById(R.id.submit_project_btn)
         submitProjectBtn.setOnClickListener(this)
 
-        emailTxt = fName?.text.toString()
-        firstName = lName.text.toString()
-        lastName = eMail.text.toString()
-        projectLink = pLink.text.toString()
-
 //        showSuccessDialog()
 //        showFailureDialog()
     }

@@ -12,6 +12,7 @@
     <color name="yellowGold">#F9A602</color>
     <color name="successGreen">#32cd32</color>
     <color name="grey">#666a6d</color>
+    <color name="lightGrey">#80666a6d</color>
     <color name="red">#FF0000</color>
 
 </resources>

@@ -24,9 +24,8 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         imageView = findViewById(R.id.back_arrow)
         imageView.setOnClickListener(this)
 
-
 //        showSuccessDialog()
-        showFailureDialog()
+//        showFailureDialog()
     }
 
     override fun onClick(view: View?) {

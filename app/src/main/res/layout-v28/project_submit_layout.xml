@@ -87,6 +87,8 @@
             app:boxCornerRadiusBottomStart="6dp"
             app:boxCornerRadiusBottomEnd="6dp"
             android:background="@color/black"
+            app:hintTextColor="@color/yellowGold"
+
             android:id="@+id/first_name"
             android:layout_width="0dp"
             app:layout_constraintWidth_percent=".45"
@@ -96,7 +98,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
+                android:textCursorDrawable="@drawable/custom_edit_text_cursor"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

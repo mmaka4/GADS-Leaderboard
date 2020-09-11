@@ -131,7 +131,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 response: Response<Void>
             ) {
                 Log.i("ResponseString: ", "Success")
-                showSuccessDialog()
+                //showSuccessDialog()
 
                 if(response.code() == 200){
                     showSuccessDialog()

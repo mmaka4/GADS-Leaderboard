@@ -80,6 +80,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         val yesBtn = dialog.findViewById(R.id.yes_btn) as Button
         yesBtn.setOnClickListener {
             Log.i("EditText ", "Values: $emailTxt $firstName $lastName $projectLink")
+            update(emailTxt, firstName, lastName, projectLink)
             dialog.dismiss()
         }
         cancelBtn.setOnClickListener { dialog.dismiss() }
@@ -129,18 +130,19 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 call: Call<Void>,
                 response: Response<Void>
             ) {
-                Log.i("ResponseString",gson.toJson(response.body()))
+                Log.i("ResponseString: ", "Success")
+                showSuccessDialog()
 
-                if(response.isSuccessful){
-
-//                    response.body()?.matunda
+                if(response.code() == 200){
+                    showSuccessDialog()
                 }else{
-
+                    Log.i("ResponseCode: ", "!= 200")
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                Log.i("ResponseFailure1",t.message!!)
+                Log.i("ResponseFailure: Submit",t.message!!)
+                showFailureDialog()
             }
 
         })

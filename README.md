@@ -33,9 +33,6 @@ GADS Leaderoard App is an application that displays Top 20 learners in the Learn
   </tr>
 </table>
 
-
-
-
 <table>
   <tr>
     <td>Failure Dialog</td>

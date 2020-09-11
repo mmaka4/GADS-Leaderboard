@@ -10,11 +10,12 @@ import com.example.gadsleaderboard.R
 import com.example.gadsleaderboard.model.Learner
 import kotlinx.android.synthetic.main.learning_item.view.*
 
-class LearnerAdapter (private val learnerList:ArrayList<Learner>, private val context: Context): RecyclerView.Adapter<LearnerAdapter.FoodViewHolder>(){
+class LearnerAdapter(private val learnerList: ArrayList<Learner>, private val context: Context) :
+    RecyclerView.Adapter<LearnerAdapter.FoodViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val layoutInflater = LayoutInflater.from(context)
-        val view:View = layoutInflater.inflate(R.layout.learning_item,parent,false)
+        val view: View = layoutInflater.inflate(R.layout.learning_item, parent, false)
         return FoodViewHolder(view)
     }
 
@@ -24,12 +25,12 @@ class LearnerAdapter (private val learnerList:ArrayList<Learner>, private val co
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         holder.name.text = learnerList[position].name
-        val hoursAndCountry = learnerList[position].hours.toString()+ " learning hours, "+ learnerList[position].country.toString()+ "."
+        val hoursAndCountry =
+            learnerList[position].hours.toString() + " learning hours, " + learnerList[position].country.toString() + "."
         holder.hours.text = hoursAndCountry
-        //Picasso.get().load(context.resources.getString(R.string.imageFruitsURL)+foodList[position].image).into(holder.image)
     }
 
-    inner class FoodViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.learner_name
         val hours: TextView = itemView.learner_hours
     }

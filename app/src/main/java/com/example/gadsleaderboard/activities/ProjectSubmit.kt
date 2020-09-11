@@ -134,6 +134,12 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
 
                 if (response.code() == 200) {
                     showSuccessDialog()
+
+                    fName?.setText("")
+                    lName?.setText("")
+                    eMail?.setText("")
+                    pLink?.setText("")
+
                 } else {
                     Log.i("ResponseCode: ", "!= 200")
                 }

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/whiteMilky"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.gadsleaderboard.SkillFragment">
+    tools:context="com.example.gadsleaderboard.fragments.SkillFragment">
 
     <ScrollView
         android:layout_width="match_parent"

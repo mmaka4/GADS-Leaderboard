@@ -1,8 +1,10 @@
-package com.example.gadsleaderboard
+package com.example.gadsleaderboard.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.example.gadsleaderboard.fragments.LearningFragment
+import com.example.gadsleaderboard.fragments.SkillFragment
 
 @Suppress("DEPRECATION")
 class TabAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm) {

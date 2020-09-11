@@ -1,4 +1,4 @@
-package com.example.gadsleaderboard
+package com.example.gadsleaderboard.activities
 
 import android.content.Intent
 import android.os.Bundle

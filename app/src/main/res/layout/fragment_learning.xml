@@ -5,7 +5,7 @@
     android:paddingBottom="10dp"
     android:background="@color/whiteMilky"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.gadsleaderboard.LearningFragment">
+    tools:context="com.example.gadsleaderboard.fragments.LearningFragment">
 
     <ScrollView
         android:layout_width="match_parent"

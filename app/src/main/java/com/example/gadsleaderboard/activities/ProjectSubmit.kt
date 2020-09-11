@@ -1,23 +1,16 @@
-package com.example.gadsleaderboard
+package com.example.gadsleaderboard.activities
 
-import android.annotation.SuppressLint
-import android.app.Activity
 import android.app.Dialog
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
 import android.view.Window
 import android.widget.Button
 import android.widget.ImageView
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.isNotEmpty
+import com.example.gadsleaderboard.R
 import com.example.gadsleaderboard.api.ServerApi
-import com.google.gson.Gson
-import kotlinx.android.synthetic.main.fail_pop_up.*
 import kotlinx.android.synthetic.main.project_submit_layout.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -47,8 +40,6 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         submitProjectBtn = findViewById(R.id.submit_project_btn)
         submitProjectBtn.setOnClickListener(this)
 
-//        showSuccessDialog()
-//        showFailureDialog()
     }
 
     override fun onClick(view: View?) {
@@ -71,7 +62,9 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showConfirmDialog() {
-        val dialog = Dialog(this, R.style.CustomDialogTheme)
+        val dialog = Dialog(this,
+            R.style.CustomDialogTheme
+        )
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.confirm_pop_up)
@@ -88,7 +81,9 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showSuccessDialog() {
-        val dialog = Dialog(this, R.style.CustomDialogTheme)
+        val dialog = Dialog(this,
+            R.style.CustomDialogTheme
+        )
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setContentView(R.layout.success_pop_up)
@@ -101,7 +96,9 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showFailureDialog() {
-        val dialog = Dialog(this, R.style.CustomDialogTheme)
+        val dialog = Dialog(this,
+            R.style.CustomDialogTheme
+        )
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
         dialog.setCanceledOnTouchOutside(true)

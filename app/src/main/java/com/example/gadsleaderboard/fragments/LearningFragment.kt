@@ -1,4 +1,4 @@
-package com.example.gadsleaderboard
+package com.example.gadsleaderboard.fragments
 
 import android.content.Context
 import android.graphics.Color
@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.gadsleaderboard.R
 import com.example.gadsleaderboard.adapter.LearnerAdapter
 import com.example.gadsleaderboard.api.NetworkClient
 import com.example.gadsleaderboard.api.ServerApi
@@ -21,8 +22,6 @@ import kotlinx.android.synthetic.main.fragment_learning.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class LearningFragment : Fragment() {
 

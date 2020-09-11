@@ -1,4 +1,4 @@
-package com.example.gadsleaderboard
+package com.example.gadsleaderboard.activities
 
 import android.content.Intent
 import android.os.Build
@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.gadsleaderboard.R
+import com.example.gadsleaderboard.adapter.TabAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),  View.OnClickListener {
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
         setContentView(R.layout.activity_main)
         backGroundColor()
 
-        val fragmentAdapter = TabAdapter(supportFragmentManager)
+        val fragmentAdapter =
+            TabAdapter(supportFragmentManager)
         viewPager.adapter = fragmentAdapter
 
         tabLayout.setupWithViewPager(viewPager)
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
 
     override fun onClick(view: View?) {
         when(view?.id) {
-            R.id.submit_btn->{
+            R.id.submit_btn ->{
                 startActivity(Intent(this, ProjectSubmit::class.java))
                 //Toast.makeText(applicationContext, "Submit Activity", Toast.LENGTH_SHORT).show()
             }

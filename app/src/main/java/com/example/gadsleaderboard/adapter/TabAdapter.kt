@@ -7,7 +7,7 @@ import com.example.gadsleaderboard.fragments.LearningFragment
 import com.example.gadsleaderboard.fragments.SkillFragment
 
 @Suppress("DEPRECATION")
-class TabAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm) {
+class TabAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
 
@@ -27,6 +27,6 @@ class TabAdapter (fm: FragmentManager) : FragmentPagerAdapter(fm) {
             0 -> "Learning Leaders"
             1 -> "Skill IQ Leaders"
             else -> throw IllegalStateException("position $position is invalid for this viewpager")
-            }
         }
+    }
 }

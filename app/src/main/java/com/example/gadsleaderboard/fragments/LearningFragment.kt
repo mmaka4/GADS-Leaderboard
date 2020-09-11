@@ -79,7 +79,7 @@ class LearningFragment : Fragment() {
         val call = api?.getLearners()
 
         call?.enqueue(object : Callback<ArrayList<Learner>> {
-        val gson = Gson()
+            val gson = Gson()
 
             override fun onResponse(
                 call: Call<ArrayList<Learner>>,

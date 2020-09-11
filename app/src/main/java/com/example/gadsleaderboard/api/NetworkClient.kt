@@ -11,7 +11,7 @@ object NetworkClient {
     fun getRetrofitClient(): Retrofit? {
         if (retrofit == null) {
 
-            val gson =  GsonBuilder()
+            val gson = GsonBuilder()
                 .setLenient()
                 .create()
 

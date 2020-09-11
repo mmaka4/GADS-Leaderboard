@@ -122,7 +122,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
 
         val call = api.submitProject(mail, firstName, lastName, projectLink)
 
-        val gson = Gson()
+        //val gson = Gson()
 
         call.enqueue(object : Callback<Void> {
 

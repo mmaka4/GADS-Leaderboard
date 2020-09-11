@@ -97,7 +97,6 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         cancelLayout.setOnClickListener{ dialog.dismiss() }
 
         dialog.show()
-        Log.i("ProjectSumit", "showDialog")
     }
 
     private fun showFailureDialog() {

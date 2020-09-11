@@ -9,4 +9,5 @@
     <string name="submit_text">Submit</string>
     <string name="sample_name">Saidi Mmaka</string>
     <string name="submission_successful">Submission Successful</string>
+    <string name="submission_not_successful">Submission not Successful</string>
 </resources>

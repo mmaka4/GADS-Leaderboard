@@ -149,7 +149,6 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 Log.i("ResponseFailure: Submit", t.message!!)
                 showFailureDialog()
             }
-
         })
 
     }

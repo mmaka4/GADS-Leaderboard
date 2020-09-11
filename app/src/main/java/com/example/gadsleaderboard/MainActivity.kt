@@ -45,6 +45,5 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = ContextCompat.getColor(this, android.R.color.transparent)
         window.navigationBarColor = ContextCompat.getColor(this, android.R.color.transparent)
-//        window.setBackgroundDrawableResource(R.drawable.gradient)
     }
 }

@@ -122,8 +122,6 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
 
         val call = api.submitProject(mail, firstName, lastName, projectLink)
 
-        //val gson = Gson()
-
         call.enqueue(object : Callback<Void> {
 
             override fun onResponse(

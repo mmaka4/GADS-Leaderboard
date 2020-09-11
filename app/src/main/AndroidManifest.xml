@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="m"
         tools:ignore="ExtraText">
+
         <activity android:name=".activities.SplashActivity" android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +28,7 @@
         <activity android:name=".fragments.SkillFragment"/>
         <activity android:name=".activities.ProjectSubmit"/>
         <activity android:name=".activities.MainActivity"/>
+
     </application>
 
 </manifest>

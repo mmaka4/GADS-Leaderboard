@@ -13,9 +13,9 @@ import com.example.gadsleaderboard.R
 import com.example.gadsleaderboard.adapter.TabAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(),  View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var button : Button
+    lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        when(view?.id) {
-            R.id.submit_btn ->{
+        when (view?.id) {
+            R.id.submit_btn -> {
                 startActivity(Intent(this, ProjectSubmit::class.java))
                 //Toast.makeText(applicationContext, "Submit Activity", Toast.LENGTH_SHORT).show()
             }

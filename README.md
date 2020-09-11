@@ -27,9 +27,9 @@ GADS Leaderboard App is an application that displays Top 20 learners in the Lear
   </tr>
   <tr>
     <td><img src="screenshot/confirmDialog.png" width=270 height=480></td>
-    <td><img src="screenshot/learningShimmerEffect.png" width=270 height=480></td>
-    <td><img src="screenshot/skillIQshimmerEffect.png" width=270 height=480></td>
-    <td><img src="screenshot/submissionSuccessful.png" width=270 height=480></td>
+    <td><img src="screenshot/learningShimmerEffect.png" width=270 height=440></td>
+    <td><img src="screenshot/skillIQshimmerEffect.png" width=270 height=440></td>
+    <td><img src="screenshot/submissionSuccessful.png" width=270 height=440></td>
   </tr>
 </table>
 

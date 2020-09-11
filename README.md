@@ -1,7 +1,7 @@
 # GADS-Leaderboard
 GADS Leaderoard App is an application that displays Top 20 learners in the Learning Leaders’ category and Top 20 learners in the Skill IQ Leaders’ category.
 
-#### App Screenshots
+### App Screenshots
 
 <table>
   <tr>

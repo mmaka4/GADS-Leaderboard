@@ -93,6 +93,9 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         dialog.setContentView(R.layout.success_pop_up)
 //         dialog.window?.setDimAmount(0.65f)
 
+        val cancelLayout = dialog.findViewById(R.id.successLayout) as ConstraintLayout
+        cancelLayout.setOnClickListener{ dialog.dismiss() }
+
         dialog.show()
         Log.i("ProjectSumit", "showDialog")
     }

@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
         when(view?.id) {
             R.id.submit_btn->{
                 startActivity(Intent(this, ProjectSubmit::class.java))
-                Toast.makeText(applicationContext, "Submit Activity", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "Submit Activity", Toast.LENGTH_SHORT).show()
             }
         }
     }

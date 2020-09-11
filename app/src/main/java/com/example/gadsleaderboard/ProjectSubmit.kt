@@ -64,13 +64,13 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 projectLink = pLink?.text.toString()
 
                 if (!emailTxt.isBlank() && !firstName.isBlank() && !lastName.isBlank() && !projectLink.isBlank()) {
-                    showFailureDialog()
+                    showConfirmDialog()
                 }
             }
         }
     }
 
-     fun showConfirmDialog() {
+    private fun showConfirmDialog() {
         val dialog = Dialog(this, R.style.CustomDialogTheme)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
@@ -86,7 +86,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         dialog.show()
     }
 
-    fun showSuccessDialog() {
+    private fun showSuccessDialog() {
         val dialog = Dialog(this, R.style.CustomDialogTheme)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)

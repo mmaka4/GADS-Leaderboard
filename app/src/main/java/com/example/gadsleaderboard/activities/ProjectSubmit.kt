@@ -20,8 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var imageView : ImageView
-    private lateinit var submitProjectBtn : Button
+    private lateinit var imageView: ImageView
+    private lateinit var submitProjectBtn: Button
 
     private val submitBaseUrl = "https://docs.google.com/forms/d/e/"
 
@@ -43,7 +43,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-        when(view?.id) {
+        when (view?.id) {
             R.id.back_arrow -> {
                 finish()
             }
@@ -62,7 +62,8 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showConfirmDialog() {
-        val dialog = Dialog(this,
+        val dialog = Dialog(
+            this,
             R.style.CustomDialogTheme
         )
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -81,7 +82,8 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showSuccessDialog() {
-        val dialog = Dialog(this,
+        val dialog = Dialog(
+            this,
             R.style.CustomDialogTheme
         )
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -90,13 +92,14 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
 //         dialog.window?.setDimAmount(0.65f)
 
         val cancelLayout = dialog.findViewById(R.id.successLayout) as ConstraintLayout
-        cancelLayout.setOnClickListener{ dialog.dismiss() }
+        cancelLayout.setOnClickListener { dialog.dismiss() }
 
         dialog.show()
     }
 
     private fun showFailureDialog() {
-        val dialog = Dialog(this,
+        val dialog = Dialog(
+            this,
             R.style.CustomDialogTheme
         )
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -106,14 +109,15 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         //dialog.window?.setDimAmount(0.65f)
 
         val cancelLayout = dialog.findViewById(R.id.failLayout) as ConstraintLayout
-        cancelLayout.setOnClickListener{ dialog.dismiss() }
+        cancelLayout.setOnClickListener { dialog.dismiss() }
         dialog.show()
     }
 
-    private fun update(mail:String, firstName:String, lastName:String, projectLink:String){
+    private fun update(mail: String, firstName: String, lastName: String, projectLink: String) {
 
         val retrofit = Retrofit.Builder().baseUrl(submitBaseUrl).addConverterFactory(
-            GsonConverterFactory.create()).build()
+            GsonConverterFactory.create()
+        ).build()
 
         val api = retrofit.create(ServerApi::class.java)
 
@@ -128,15 +132,15 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 Log.i("ResponseString: ", "Success")
                 //showSuccessDialog()
 
-                if(response.code() == 200){
+                if (response.code() == 200) {
                     showSuccessDialog()
-                }else{
+                } else {
                     Log.i("ResponseCode: ", "!= 200")
                 }
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                Log.i("ResponseFailure: Submit",t.message!!)
+                Log.i("ResponseFailure: Submit", t.message!!)
                 showFailureDialog()
             }
 

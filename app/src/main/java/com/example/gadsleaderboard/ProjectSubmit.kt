@@ -13,9 +13,11 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.isNotEmpty
 import com.example.gadsleaderboard.api.ServerApi
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.fail_pop_up.*
 import kotlinx.android.synthetic.main.project_submit_layout.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -62,7 +64,7 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
                 projectLink = pLink?.text.toString()
 
                 if (!emailTxt.isBlank() && !firstName.isBlank() && !lastName.isBlank() && !projectLink.isBlank()) {
-                    showConfirmDialog()
+                    showFailureDialog()
                 }
             }
         }
@@ -95,15 +97,17 @@ class ProjectSubmit : AppCompatActivity(), View.OnClickListener {
         Log.i("ProjectSumit", "showDialog")
     }
 
-    fun showFailureDialog() {
+    private fun showFailureDialog() {
         val dialog = Dialog(this, R.style.CustomDialogTheme)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.setCancelable(false)
+        dialog.setCanceledOnTouchOutside(true)
         dialog.setContentView(R.layout.fail_pop_up)
-//         dialog.window?.setDimAmount(0.65f)
+        //dialog.window?.setDimAmount(0.65f)
 
+        val cancelLayout = dialog.findViewById(R.id.failLayout) as ConstraintLayout
+        cancelLayout.setOnClickListener{ dialog.dismiss() }
         dialog.show()
-        Log.i("ProjectSumit", "showDialog")
     }
 
     private fun update(mail:String, firstName:String, lastName:String, projectLink:String){

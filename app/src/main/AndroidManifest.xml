@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.gadsleaderboard">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,22 +12,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="m"
-        tools:ignore="ExtraText">
+        android:usesCleartextTraffic="true"
+        tools:ignore="ExtraText"
+        tools:targetApi="m">
 
-        <activity android:name=".activities.SplashActivity" android:theme="@style/SplashScreenTheme">
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragments.LearningFragment"/>
-        <activity android:name=".fragments.SkillFragment"/>
-        <activity android:name=".activities.ProjectSubmit"/>
-        <activity android:name=".activities.MainActivity"/>
+        <activity android:name=".fragments.LearningFragment" />
+        <activity android:name=".fragments.SkillFragment" />
+        <activity android:name=".activities.ProjectSubmit" />
+        <activity android:name=".activities.MainActivity" />
 
     </application>
 

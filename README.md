@@ -12,9 +12,9 @@ GADS Leaderboard App is an application that displays Top 20 learners in the Lear
   </tr>
   <tr>
     <td><img src="screenshot/splashscreen.png" ></td>
-    <td><img src="screenshot/learningLeaders.png" width=270 height=440></td>
-    <td><img src="screenshot/skillLeaders.png" width=270 height=440></td>
-    <td><img src="screenshot/projectSubmit.png" width=270 height=440></td>
+    <td><img src="screenshot/learningLeaders.png" ></td>
+    <td><img src="screenshot/skillLeaders.png" ></td>
+    <td><img src="screenshot/projectSubmit.png" ></td>
   </tr>
 </table>
 

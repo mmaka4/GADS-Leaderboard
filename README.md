@@ -26,10 +26,10 @@ GADS Leaderboard App is an application that displays Top 20 learners in the Lear
     <td>Successful Dialog</td>
   </tr>
   <tr>
-    <td><img src="screenshot/confirmDialog.png" width=270 height=440></td>
-    <td><img src="screenshot/learningShimmerEffect.png" width=270 height=440></td>
-    <td><img src="screenshot/skillIQshimmerEffect.png" width=270 height=440></td>
-    <td><img src="screenshot/submissionSuccessful.png" width=270 height=440></td>
+    <td><img src="screenshot/confirmDialog.png" ></td>
+    <td><img src="screenshot/learningShimmerEffect.png" ></td>
+    <td><img src="screenshot/skillIQshimmerEffect.png" ></td>
+    <td><img src="screenshot/submissionSuccessful.png" ></td>
   </tr>
 </table>
 
@@ -38,6 +38,6 @@ GADS Leaderboard App is an application that displays Top 20 learners in the Lear
     <td>Failure Dialog</td>
   </tr>
   <tr>
-    <td><img src="screenshot/submissionFailure.png" width=240 height=440></td>
+    <td><img src="screenshot/submissionFailure.png" ></td>
   </tr>
 </table>
